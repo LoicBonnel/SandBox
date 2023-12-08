@@ -1,0 +1,64 @@
+body {
+}
+
+img {
+    width: 350px;
+}
+
+.div1 {
+}
+
+.div2 {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+}
+
+p {
+    background-color: red;
+    display: inline-block;
+}
+
+ul{
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.vinyle{
+}
+
+@keyframes turn {
+    0% {
+       transform :rotate(0deg) scale(1); 
+    }
+    /* 25% {
+        transform :rotate(90deg) scale(2); 
+     } */
+    50% {
+        transform :rotate(180deg); 
+     }
+    100% {
+        transform :rotate(360deg); 
+    }
+}
+
+.johnny {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 100%;
+    position: absolute;
+    top : 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.disque{
+    position: relative;
+    display: inline-block;
+    animation: turn 4s infinite linear;
+}

@@ -6,6 +6,25 @@ const dob = 2003; //ne plus utiliser
 const isAdmin = false; //Boolean
 const apprenants = ["Enzo", "Thomas", "Valentin"];  // tableau
 const sac = {livre: 'BD Tintin', trousse: 'stylo', skills: ["Bagarre", "Jeux Vidéos"] } // objet
+const disque = document.querySelector(".disque");
+const btnPause = document.getElementById("btnPause");
+const paragraphe = document.querySelector(".div1 p");
+
+setTimeout(() => {
+    paragraphe.style.backgroundColor = "blue";
+}, 4000);
+
+btnPause.addEventListener("click", ()=> {
+    disque.classList.toggle("pause");
+
+    if (disque.classList.contains("pause")){
+        btnPause.textContent = "Play";
+    }else{
+        btnPause.textContent = "Pause";
+    }
+});
+
+console.log(disque);
 
 console.log(apprenants[2]);
 console.log(sac.skills[0]);

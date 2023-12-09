@@ -9,36 +9,40 @@
     <script src="assets/js/app.js" defer></script>
 </head>
 
+<!-- Ajoutez ceci dans le corps de votre document -->
+<audio id="clickSoundHome" src="chemin/vers/votre/son_home.mp3"></audio>
+<audio id="clickSoundMusic" src="chemin/vers/votre/son_music.mp3"></audio>
+<audio id="clickSoundContact" src="chemin/vers/votre/son_contact.mp3"></audio>
+
 <body>
     <header>
-        <nav>
+        <nav class="navbar">
             <ul>
-                <li>
-                    Acceuil
+                <li class="nav-item" data-section-id="home">
+                    Accueil
                 </li>
-                <li>
+                <li class="nav-item" data-section-id="music-list">
                     Liste Musique
                 </li>
-                <li>
+                <li class="nav-item" data-section-id="contact">
                     Contact
                 </li>
             </ul>
         </nav>
-    </header>
-    <div class="div1">
-        <h1>Page D'accueil</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ut dicta quod at numquam, illum aliquid
-            tenetur id? Suscipit laborum aperiam cupiditate ratione in qui eos repellat voluptatum eum expedita!</p>
-
-        <div class="disque">
-            <img class="vinyle" src="assets/pictures/vinyle.png" alt="Disque Vinyle">
-            <img class="johnny" src="assets/pictures/Johnny.png" alt="Johnny">
+        <div class="video-container">
+            <video id="bgVideo" loop autoplay muted poster="crazyFrog.jpg">
+                <!-- Assurez-vous que le chemin du fichier vidéo est correct -->
+                <source src="assets/videos/ZIZIN FM V4.mp4" type="video/mp4">
+            </video>
         </div>
-    </div>
-    <span class="div2">
+    </header>
 
-    </span>
-    <p>coucou</p>
+<div class="juckBox">
+    <div class="disque">
+        <img class="vinyle" src="assets/pictures/vinyle.png" alt="Disque Vinyle">
+        <img class="johnny" src="assets/pictures/Johnny.png" alt="Johnny">
+    </div>
+</div>
     <button id="btnPause">pause</button>
     <audio src="uploads/musics/JohnnyHallydayPokemon.mp3" controls autoplay></audio>
 </body>

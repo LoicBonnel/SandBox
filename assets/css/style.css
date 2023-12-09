@@ -1,11 +1,11 @@
 body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
 }
 
 img {
-    width: 350px;
-}
-
-.div1 {
+    width: 500px;
 }
 
 .div2 {
@@ -21,14 +21,9 @@ p {
 
 ul{
     display: flex;
-    gap: 10px;
-    margin: 0;
     padding: 0;
     list-style: none;
     justify-content: space-around;
-}
-
-.vinyle{
 }
 
 @keyframes turn {
@@ -58,11 +53,86 @@ ul{
 }
 
 .disque{
-    position: relative;
     display: inline-block;
     animation: turn 4s infinite linear;
 }
 
 .pause{
     animation-play-state: paused;
+}
+
+.juckBox{
+    display: flex;
+    justify-content: center;
+}
+
+.imgEnTete{
+width: 100%;
+}
+
+.header {
+    width: 100%;
+}
+
+
+/* Ajoutez votre style CSS existant ici */
+
+/* Assurez-vous que la vidéo prend toute la largeur de l'écran et s'ajuste en hauteur de manière proportionnelle */
+.video-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* Rapport d'aspect 16:9 (9/16 * 100) */
+}
+
+#bgVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Masquez les contrôles de lecture de la vidéo */
+#bgVideo::-webkit-media-controls {
+    display: none !important;
+}
+
+#bgVideo::-webkit-media-controls-enclosure {
+    display: none !important;
+}
+
+#bgVideo::-webkit-media-controls-panel {
+    display: none !important;
+}
+
+
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: purple; /* Fond de couleur violet */
+    z-index: 1000; /* Assure que la barre de navigation est au-dessus de la vidéo */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around; /* Espace un peu plus les différents liens */
+    align-items: center;
+}
+
+.nav-item {
+    list-style: none;
+    margin: 0 80px; /* Réduction de la marge autour des liens */
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Transition pour le changement de couleur au survol */
+}
+
+.nav-item:hover {
+    color: rgb(106, 106, 224) /* Changement de couleur au survol en bleu foncé */
 }

@@ -19,12 +19,13 @@ setTimeout(() => {
 }, 4000);
 
 
-playlist.addEventListener("click", async (event) => {
+document.getElementById('btnPlaylist').addEventListener('click', function(event) {
     event.preventDefault(); // Empêche le comportement par défaut du lien
-    console.log("Bouton Playlist cliqué");
-    const playlistContainer = document.querySelector('.listPlaylist');
-    playlistContainer.classList.add("visible"); // Ajoutez la classe visible
+
+    var playlistContainer = document.querySelector('.playlistContainer');
+    playlistContainer.style.display = (playlistContainer.style.display === 'block') ? 'none' : 'block';
 });
+
 
 
 

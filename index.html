@@ -19,13 +19,13 @@
         <nav class="navbar">
             <ul>
                 <li class="nav-item" data-section-id="home">
-                    <a href="index.html" >Home</a>
+                    <a id="btnHome" href="index.html" >Home</a>
                 </li>
                 <li class="nav-item" data-section-id="music-list">
-                    <a id="btnPlaylist" href="" >Playlist</a>
+                    <a id="btnPlaylist"  href="">Playlist</a>
                 </li>
                 <li class="nav-item" data-section-id="contact">
-                    <a href="page.php" >Contact</a>
+                    <a id="btnChooseDisk" href="">Choose Disck</a>
                 </li>
             </ul>
         </nav>
@@ -37,18 +37,12 @@
         </div>
     </header>
 
-<div class="juckBox">
-    <div class="disque">
-        <img class="vinyle" src="assets/pictures/vinyle.png" alt="Disque Vinyle">
-        <img class="johnny" src="assets/pictures/Johnny.png" alt="Johnny">
-    </div>
-</div>
-    <button id="btnPause">pause</button>
-    <audio src="uploads/musics/JohnnyHallydayPokemon.mp3" controls autoplay></audio>
-
-    <div id="playlistContainer" class="listPlaylist visible">
+    <div id="playlistContainer" class="playlistContainer">
         <div class="search-container">
-        <label for="search">Rechercher par chanson ou artiste :</label>
+            <div class="search-header">
+                <img src="assets/pictures/logoSearch.png" alt="Logo Recherche">
+                <label for="search">Rechercher par chanson ou artiste :</label>
+            </div>
         <input type="text" id="search" placeholder="Entrez le nom de la chanson ou de l'artiste">
     </div>
 
@@ -62,5 +56,21 @@
         <tbody id="listeMusique" class="musique-list"></tbody>
     </table>
 </div>
+
+
+
+
+
+
+
+<div class="juckBox">
+    <div class="disque">
+        <img class="vinyle" src="assets/pictures/vinyle.png" alt="Disque Vinyle">
+        <img class="johnny" src="assets/pictures/Johnny.png" alt="Johnny">
+    </div>
+</div>
+    <button id="btnPause">pause</button>
+    <audio src="uploads/musics/JohnnyHallydayPokemon.mp3" controls autoplay></audio>
+
 </body>
 </html>

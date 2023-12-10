@@ -19,20 +19,20 @@
         <nav class="navbar">
             <ul>
                 <li class="nav-item" data-section-id="home">
-                    Accueil
+                    <a href="index.html" >Home</a>
                 </li>
                 <li class="nav-item" data-section-id="music-list">
-                    Liste Musique
+                    <a id="btnPlaylist" href="" >Playlist</a>
                 </li>
                 <li class="nav-item" data-section-id="contact">
-                    Contact
+                    <a href="page.php" >Contact</a>
                 </li>
             </ul>
         </nav>
         <div class="video-container">
             <video id="bgVideo" loop autoplay muted poster="crazyFrog.jpg">
                 <!-- Assurez-vous que le chemin du fichier vidéo est correct -->
-                <source src="assets/videos/ZIZIN FM V4.mp4" type="video/mp4">
+                <source src="assets/videos/ZIZIN FM V2.mp4" type="video/mp4">
             </video>
         </div>
     </header>
@@ -45,6 +45,22 @@
 </div>
     <button id="btnPause">pause</button>
     <audio src="uploads/musics/JohnnyHallydayPokemon.mp3" controls autoplay></audio>
-</body>
 
+    <div id="playlistContainer" class="listPlaylist visible">
+        <div class="search-container">
+        <label for="search">Rechercher par chanson ou artiste :</label>
+        <input type="text" id="search" placeholder="Entrez le nom de la chanson ou de l'artiste">
+    </div>
+
+    <table id="listeMusique" class="musique-table">
+        <thead>
+            <tr>
+                <th>Artiste</th>
+                <th>Nom de la musique</th>
+            </tr>
+        </thead>
+        <tbody id="listeMusique" class="musique-list"></tbody>
+    </table>
+</div>
+</body>
 </html>

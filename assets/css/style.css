@@ -26,18 +26,22 @@ ul{
     justify-content: space-around;
 }
 
+a {
+    list-style: none;
+}
+
 @keyframes turn {
     0% {
-       transform :rotate(0deg) scale(1); 
+       transform :rotate(0deg) scale(1);
     }
     /* 25% {
-        transform :rotate(90deg) scale(2); 
+        transform :rotate(90deg) scale(2);
      } */
     50% {
-        transform :rotate(180deg); 
+        transform :rotate(180deg);
      }
     100% {
-        transform :rotate(360deg); 
+        transform :rotate(360deg);
     }
 }
 
@@ -118,21 +122,64 @@ header {
     z-index: 1000; /* Assure que la barre de navigation est au-dessus de la vidéo */
 }
 
+/* ... (autres styles) */
+
+/* Nouveaux styles pour la barre de navigation */
 .navbar {
     display: flex;
-    justify-content: space-around; /* Espace un peu plus les différents liens */
+    justify-content: space-around;
     align-items: center;
+    background-color: purple; /* Fond de couleur violet */
+    z-index: 1000; /* Assure que la barre de navigation est au-dessus de la vidéo */
 }
 
 .nav-item {
-    list-style: none;
-    margin: 0 80px; /* Réduction de la marge autour des liens */
-    color: white;
-    cursor: pointer;
+    margin: 0 80px; /* Ajustement de la marge autour des liens */
+    list-style: none; /* Ajout de cette propriété pour enlever le style de liste */
+}
+
+.nav-item a {
+    text-decoration: none; /* Supprimer le soulignement */
+    color: white; /* Couleur du texte pour les liens dans la barre de navigation */
     font-weight: bold;
     transition: color 0.3s ease; /* Transition pour le changement de couleur au survol */
 }
 
-.nav-item:hover {
-    color: rgb(106, 106, 224) /* Changement de couleur au survol en bleu foncé */
+.nav-item a:hover {
+    color: rgb(106, 106, 224); /* Changement de couleur au survol en bleu foncé */
 }
+
+
+.musique-table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    
+}
+
+.musique-table th,
+.musique-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    text-align: center;
+}
+
+.musique-table th {
+    background-color: violet; /* Fond violet pour les en-têtes */
+    color: black;
+    text-align: center;
+}
+
+.listPlaylist {
+    display: none;
+}
+
+.visible {
+    display: flexbox;
+    
+}
+

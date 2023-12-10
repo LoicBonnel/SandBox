@@ -1,0 +1,14 @@
+{
+    "musiques": [
+      {
+        "titre": "Générique Pokémon",
+        "artiste": "Johnny Hallyday",
+        "lien": "uploads/musics/JohnnyHallydayPokemon.mp3"
+      },
+      {
+        "titre": "Nom de la chanson 2",
+        "artiste": "Artiste 2",
+        "lien": "uploads/musics/JohnnyHallydayPokemon.mp3"
+      }
+    ]
+  }

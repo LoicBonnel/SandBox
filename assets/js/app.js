@@ -22,9 +22,6 @@ document.getElementById('btnPlaylist').addEventListener('click', function(event)
 
 
 
-
-
-
 // Fonction pour charger et jouer la musique
 async function chargerEtJouerMusique() {
     try {

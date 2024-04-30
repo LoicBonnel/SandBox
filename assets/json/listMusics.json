@@ -2,8 +2,8 @@
   {
          "id" : 1,
          "artist": "Johny Halliday",
-         "cover" :"/assets/pictures/pokemonJohny.jpg",
-         "sound" : "/uploads/musics/johnnyHallydayPokemon.mp3",
+         "cover" :"./assets/pictures/pokemonJohny.jpg",
+         "sound" : "./uploads/musics/johnnyHallydayPokemon.mp3",
          "title" : "Pokemon Generic",
          "category" : "anime"
      },
@@ -11,8 +11,8 @@
      {
          "id" : 2,
          "artist": "Elena Siegman",
-         "cover" : "/assets/pictures/bo1.png",
-         "sound" : "/uploads/musics/blackOpsZombies.mp3",
+         "cover" : "./assets/pictures/bo1.png",
+         "sound" : "./uploads/musics/blackOpsZombies.mp3",
          "title" : "115 Black Ops Zombie",
          "category" : "video game"
      },
@@ -20,8 +20,8 @@
      {
          "id" : 3,
          "artist": "Capcom",
-         "cover" : "/assets/pictures/streetFighterIIZangief.png",
-         "sound" : "/uploads/musics/streetFighterII.mp3",
+         "cover" : "./assets/pictures/streetFighterIIZangief.png",
+         "sound" : "./uploads/musics/streetFighterII.mp3",
          "title" : "Street Fighter 2",
          "category" : "video game"
      },
@@ -29,8 +29,8 @@
      {
          "id" : 4,
          "artist": "Pixar",
-         "cover" : "/assets/pictures/monsterAndCie.jpg",
-         "sound" : "/uploads/musics/monstresEtCompagnie.mp3",
+         "cover" : "./assets/pictures/monsterAndCie.jpg",
+         "sound" : "./uploads/musics/monstresEtCompagnie.mp3",
          "title" : "Monstre And Cie Generic",
          "category" : "Disney"
      }

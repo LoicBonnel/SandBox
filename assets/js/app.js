@@ -25,7 +25,7 @@ document.getElementById('btnPlaylist').addEventListener('click', function(event)
 // Fonction pour charger et jouer la musique
 async function chargerEtJouerMusique() {
     try {
-        const response = await fetch('assets/json/listMusics.json');
+        const response = await fetch('../assets/json/listMusics.json');
         if (!response.ok) {
             throw new Error(`Erreur HTTP: ${response.status}`);
         }
@@ -157,13 +157,13 @@ document.getElementById('btnPause').addEventListener('click', function() {
 
     // Gestion de la pause/play au clic sur le bouton Pause
     if (video.paused) {
-        btnPauseImage.src = "assets/pictures/bouton-pause.png";
+        btnPauseImage.src = "../assets/pictures/bouton-pause.png";
         video.play();
         if (audioPlayer) {
             audioPlayer.play();
         }
     } else {
-        btnPauseImage.src = "assets/pictures/bouton-jouer.png";
+        btnPauseImage.src = "../assets/pictures/bouton-jouer.png";
         video.pause();
         if (audioPlayer) {
             audioPlayer.pause();

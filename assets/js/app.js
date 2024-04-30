@@ -60,6 +60,7 @@ function afficherMusiques(musiques) {
         titleCell.textContent = musique.title;
     
         // Création d'un bouton de lecture pour chaque musique
+        console.log(musique)
         const playButton = document.createElement('button');
         playButton.textContent = '';
         playButton.style.cursor = "pointer";

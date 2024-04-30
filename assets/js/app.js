@@ -72,7 +72,7 @@ function afficherMusiques(musiques) {
         playButton.style.borderRadius = '5px'; // Ajoutez un rayon de bordure arrondi
         
         // Ajoutez une image de fond au bouton
-        playButton.style.backgroundImage = `testurl(.${musique.cover})`;
+        playButton.style.backgroundImage = `url(./assets/pictures/disques/vinyle.png)`;
         playButton.style.backgroundSize = 'cover'; // Ajustez la taille de l'image de fond
         playButton.style.backgroundPosition = 'center'; // Centrez l'image de fond
         

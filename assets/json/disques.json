@@ -2,16 +2,16 @@
     {
         "id": 1,
         "type": "vinyle",
-        "image": "/assets/pictures/disques/vinyle.png"
+        "image": "./assets/pictures/disques/vinyle.png"
     },
     {
         "id": 2,
         "type": "cd",
-        "image": "/assets/pictures/disques/vinyle.png"
+        "image": "./assets/pictures/disques/vinyle.png"
     },
     {
         "id": 3,
         "type": "mp3",
-        "image": "/assets/pictures/disques/vinyle.png"
+        "image": "./assets/pictures/disques/vinyle.png"
     }
 ]

@@ -6,6 +6,7 @@ body {
 
 img {
     width: 500px;
+    position: static;
 }
 
 .div2 {
@@ -45,7 +46,7 @@ a {
     }
 }
 
-.johnny {
+.coverDisque {
     width: 110px;
     height: 110px;
     object-fit: cover;
@@ -65,10 +66,64 @@ a {
     animation-play-state: paused;
 }
 
-.juckBox{
-    display: flex;
-    justify-content: center;
+.juckBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -58%);
+    z-index: 1; /* Assure que le disque est au-dessus de la vidéo */
+    max-width: 500px; /* Limite la largeur maximale du juckBox */
+    max-height: 500px; 
 }
+
+#btnPause {
+    position: absolute;
+    top: 100%; /* Ajustez la position verticale selon vos besoins */
+    right: 50%; /* Ajustez la position horizontale selon vos besoins */
+    transform: translate(50%, -50%); /* Centre le bouton horizontalement */
+    z-index: 1000; /* Assure que le bouton est au-dessus de la vidéo */
+
+    padding: 10px 50px;
+    border: none; /* Supprime la bordure */
+    border-radius: 20px; /* Arrondi les coins */
+    
+    background-color: #994caf; /* Couleur de fond */
+    cursor: pointer; /* Curseur de la souris en pointeur */
+    transition: background-color 0.3s; /* Transition en douceur lors du survol */
+}
+
+#btnRandom {
+    position: absolute;
+    top: 100%; /* Ajustez la position verticale selon vos besoins */
+    right: 38%; /* Ajustez la position horizontale selon vos besoins */
+    transform: translate(50%, -50%); /* Centre le bouton horizontalement */
+    z-index: 1000; /* Assure que le bouton est au-dessus de la vidéo */
+    border: none; /* Supprime la bordure */
+    border-radius: 90px; /* Arrondi les coins */
+    background-color: transparent;
+    cursor: pointer; /* Curseur de la souris en pointeur */
+}
+
+#btnRandom img {
+    width: 100px;
+    height: 100px;
+} 
+
+#btnRandom:hover {
+    width: 110px;
+    height: 110px;  
+}
+
+#btnPause img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Style du bouton au survol */
+#btnPause:hover {
+    background-color: blueviolet; /* Couleur de fond plus foncée */
+}
+
 
 .imgEnTete{
 width: 100%;
@@ -78,6 +133,11 @@ width: 100%;
     width: 100%;
 }
 
+#logoSite {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+}
 
 /* Ajoutez votre style CSS existant ici */
 
@@ -88,6 +148,7 @@ width: 100%;
     width: 100%;
     padding-top: 56.25%; /* Rapport d'aspect 16:9 (9/16 * 100) */
 }
+
 
 #bgVideo {
     position: absolute;
@@ -136,11 +197,12 @@ header {
 .nav-item {
     margin: 0 80px; /* Ajustement de la marge autour des liens */
     list-style: none; /* Ajout de cette propriété pour enlever le style de liste */
+    font-size: 25px;
 }
 
 .nav-item a {
     text-decoration: none; /* Supprimer le soulignement */
-    color: white; /* Couleur du texte pour les liens dans la barre de navigation */
+    color:white; /* Couleur du texte pour les liens dans la barre de navigation */
     font-weight: bold;
     transition: color 0.3s ease; /* Transition pour le changement de couleur au survol */
 }
@@ -164,7 +226,8 @@ header {
     justify-content: flex-start; /* Aligner à gauche */
     padding-left: 10px; /* Ajouter un espace à gauche */
     z-index: 1002; /* Une valeur supérieure à la barre de navigation */
-    border-bottom-left-radius: 20px; /* Rayon de bordure pour le coin inférieur gauche */}
+    border-bottom-left-radius: 20px; /* Rayon de bordure pour le coin inférieur gauche */
+}
 
 .search-header {
     display: flex;
@@ -174,27 +237,30 @@ header {
 .search-header img {
     width: 100%; /* Le logo prend le plus de place possible */
     height: 100%;
-    max-width: 30px; /* Limiter la largeur du logo si nécessaire */
+    max-width: 90px; /* Limiter la largeur du logo si nécessaire */
     margin-right: 10px;
 }
 
 #search {
     color: rgb(0, 0, 0) !important; /* Couleur jaune pour le texte */
     background-color: transparent; /* Fond transparent */
-    border: 1px solid rgb(156, 92, 172); /* Bordure jaune */
+    border: 1px solid rgb(156, 92, 172); 
     padding: 5px; /* Ajuster le rembourrage selon vos préférences */
     margin-left: 10px; /* Ajuster la marge à droite si nécessaire */
     width: 280px;
 }
 
 #search::placeholder {
-    color:rgb(97, 8, 85); /* Remplacez #your_color par la couleur que vous souhaitez */
-    font-size: 11px;
+    color: black; /* Remplacez #your_color par la couleur que vous souhaitez */
+    font-size: 13px;
+    font-weight: bold;
     text-align: center;
 }
 
 .musique-table {
     width: 90%;
+    font-size: 20px;
+    font-weight: bold;
     border-collapse: collapse;
     margin: 20px auto;
     border-radius: 10px;
@@ -230,4 +296,11 @@ header {
     background-color: rgb(122, 122, 196, 9%);
     color: rgb(255, 255, 255);
     text-align: center;
+}
+
+.table-image {
+    max-width: 100px; 
+    max-height: 100px; 
+    width: 50px; 
+    height: 50px; 
 }

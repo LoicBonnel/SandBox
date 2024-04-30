@@ -7,12 +7,8 @@
     <title>Page d'accueil - Zinzin FM</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/app.js" defer></script>
+    <link rel="shortcut icon" href="/assets/pictures/homerDuff.png" type="image/x-icon">
 </head>
-
-<!-- Ajoutez ceci dans le corps de votre document -->
-<audio id="clickSoundHome" src="chemin/vers/votre/son_home.mp3"></audio>
-<audio id="clickSoundMusic" src="chemin/vers/votre/son_music.mp3"></audio>
-<audio id="clickSoundContact" src="chemin/vers/votre/son_contact.mp3"></audio>
 
 <body>
     <header>
@@ -25,7 +21,7 @@
                     <a id="btnPlaylist"  href="">Playlist</a>
                 </li>
                 <li class="nav-item" data-section-id="contact">
-                    <a id="btnChooseDisk" href="">Choose Disck</a>
+                    <a id="btnChooseDisk" href="">Choose Disk</a>
                 </li>
             </ul>
         </nav>
@@ -34,43 +30,47 @@
                 <!-- Assurez-vous que le chemin du fichier vidéo est correct -->
                 <source src="assets/videos/ZIZIN FM V2.mp4" type="video/mp4">
             </video>
+            <div class="juckBox">
+                <div class="disque">
+                    <img class="vinyle" src="assets/pictures/disques/vinyle.png" alt="Disque Vinyle">
+                    <img class="coverDisque" src="" alt="cover de la musique">
+                </div>
+            </div>
         </div>
     </header>
 
+    <!-- Playlist -->
     <div id="playlistContainer" class="playlistContainer">
         <div class="search-container">
             <div class="search-header">
                 <img src="assets/pictures/logoSearch.png" alt="Logo Recherche">
                 <label for="search">Rechercher par chanson ou artiste :</label>
             </div>
-        <input type="text" id="search" placeholder="Entrez le nom de la chanson ou de l'artiste">
+            <input type="text" id="search" placeholder="Entrez le nom de la chanson ou de l'artiste">
+        </div>
+    
+        <table class="musique-table">
+            <thead>
+                <tr>
+                    <th>Artiste</th>
+                    <th>Nom de la musique</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="listeMusiqueBody" class="musique-list"></tbody>
+        </table>
     </div>
-
-    <table id="listeMusique" class="musique-table">
-        <thead>
-            <tr>
-                <th>Artiste</th>
-                <th>Nom de la musique</th>
-            </tr>
-        </thead>
-        <tbody id="listeMusique" class="musique-list"></tbody>
-    </table>
-</div>
+ 
+    <!-- Choix du disque -->
+    <!-- <div id="chooseDiskContainer" class="choose-disk-container">
+        <h2>Choisir le disque</h2>
+        <div class="disques-container" id="disquesContainer"></div>
+        <button id="btnChooseDiskConfirm">Confirmer</button>
+    </div> -->
 
 
-
-
-
-
-
-<div class="juckBox">
-    <div class="disque">
-        <img class="vinyle" src="assets/pictures/vinyle.png" alt="Disque Vinyle">
-        <img class="johnny" src="assets/pictures/Johnny.png" alt="Johnny">
-    </div>
-</div>
-    <button id="btnPause">pause</button>
-    <audio src="uploads/musics/JohnnyHallydayPokemon.mp3" controls autoplay></audio>
+    <button id="btnPause"><img id="imgBtn" src="assets/pictures/bouton-jouer.png"></button>
+    <button id="btnRandom"><img id="imgBtnRandom" src="assets/pictures/des2.png"></button>
 
 </body>
 </html>

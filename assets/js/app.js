@@ -25,7 +25,7 @@ document.getElementById('btnPlaylist').addEventListener('click', function(event)
 // Fonction pour charger et jouer la musique
 async function chargerEtJouerMusique() {
     try {
-        const response = await fetch('./assets/json/listMusics.json');
+        const response = await fetch('https://apiswagger-docw.onrender.com/api/V1/music');
         if (!response.ok) {
             throw new Error(`Erreur HTTP: ${response.status}`);
         }

@@ -237,7 +237,7 @@ header {
 .search-header img {
     width: 100%; /* Le logo prend le plus de place possible */
     height: 100%;
-    max-width: 90px; /* Limiter la largeur du logo si nécessaire */
+    max-width: 60px; /* Limiter la largeur du logo si nécessaire */
     margin-right: 10px;
 }
 

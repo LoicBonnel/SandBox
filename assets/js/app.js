@@ -31,6 +31,7 @@ async function chargerEtJouerMusique() {
         }
 
         data = await response.json();
+        data = data.result;
 
         afficherMusiques(data); // Afficher toutes les musiques au chargement initial
 
